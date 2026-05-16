@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { MenuIcon } from "lucide-react";
 import { useParams } from "next/navigation";
@@ -10,11 +10,11 @@ import Title from "./title";
 import { type DocumentSummary } from "@/types/document";
 
 interface NavbarProps {
-  isCollapsed:boolean
-  onResetWidth:() => void
+  isCollapsed: boolean;
+  onResetWidth: () => void;
   documents: DocumentSummary[];
   userName: string;
-};
+}
 
 const Navbar = ({
   isCollapsed,
@@ -27,7 +27,7 @@ const Navbar = ({
     ? params.documentId[0]
     : params.documentId;
   const document = documentId
-    ? documents.find((item) => item.id === documentId) ?? null
+    ? (documents.find((item) => item.id === documentId) ?? null)
     : null;
 
   if (!document) {
@@ -36,17 +36,21 @@ const Navbar = ({
 
   return (
     <>
-      <nav className="bg-background dark:bg-secondary/70 px-3 py-2 w-full
-      flex gap-x-4 items-center">
+      <nav
+        className="bg-background dark:bg-secondary/40 px-3 py-2 w-full
+      flex gap-x-4 items-center"
+      >
         {isCollapsed && (
-          <MenuIcon className="w-6 h-6 text-muted-foreground" role="button"
-           onClick={onResetWidth}
-           />
+          <MenuIcon
+            className="w-6 h-6 text-muted-foreground"
+            role="button"
+            onClick={onResetWidth}
+          />
         )}
         <div className="flex justify-between items-center w-full">
-          <Title initialData={document}/>
+          <Title initialData={document} />
           <div className="flex gap-x-2 items-center">
-            <Publish initialData={document}/>
+            <Publish initialData={document} />
             <Menu
               documentId={document.id}
               lastEditedBy={userName}
@@ -55,9 +59,7 @@ const Navbar = ({
           </div>
         </div>
       </nav>
-      {document.isArchived && (
-        <Banner documentId={document.id}/>
-      )}
+      {document.isArchived && <Banner documentId={document.id} />}
     </>
   );
 };

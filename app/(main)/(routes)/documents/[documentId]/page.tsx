@@ -6,6 +6,7 @@ import { Toolbar } from "@/components/toolbar";
 import DocumentEditor from "@/components/document-editor";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { mockPage } from "@/lib/mock-page";
 
 interface DocumentIdPageProps {
   params: {
@@ -20,22 +21,25 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
     redirect("/");
   }
 
-  const document = await prisma.document.findFirst({
-    where: {
-      id: params.documentId,
-      userId: session.user.id,
-    },
-    select: {
-      id: true,
-      title: true,
-      content: true,
-      icon: true,
-      coverImage: true,
-      parentId: true,
-      isArchived: true,
-      isPublished: true,
-    },
-  });
+  const document =
+    params.documentId === mockPage.id
+      ? mockPage
+      : await prisma.document.findFirst({
+          where: {
+            id: params.documentId,
+            userId: session.user.id,
+          },
+          select: {
+            id: true,
+            title: true,
+            content: true,
+            icon: true,
+            coverImage: true,
+            parentId: true,
+            isArchived: true,
+            isPublished: true,
+          },
+        });
 
   if (!document) {
     notFound();

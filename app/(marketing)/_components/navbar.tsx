@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -32,16 +32,21 @@ const Navbar = () => {
   };
 
   return (
-    <div className={cn(`z-50 bg-background dark:bg-secondary/70 fixed top-0 flex items-center w-full p-5`,scrolled && 'border-b shadow-sm')}>
-      <Logo/>
+    <div
+      className={cn(
+        `z-50 bg-background dark:bg-secondary/30 fixed top-0 flex items-center w-full p-5`,
+        scrolled && "border-b shadow-sm",
+      )}
+    >
+      <Logo />
       <div className="md:ml-auto md:justify-end flex gap-x-2 justify-between items-center w-full">
         <Button size="sm" onClick={onSignIn}>
           Get Notion Today
         </Button>
-        <ModeToggle/>
+        <ModeToggle />
       </div>
     </div>
- );
+  );
 };
 
 export { Navbar };

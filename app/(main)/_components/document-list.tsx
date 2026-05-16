@@ -62,7 +62,7 @@ const DocumentList = ({
             onClick={() => onRedirect(document.id)}
             label={document.title}
             icon={FileIcon}
-            documentIcon={document.icon}
+            documentIcon={document.icon!}
             active={currentDocumentId === document.id}
             level={level}
             onExpand={() => onExpand(document.id)}

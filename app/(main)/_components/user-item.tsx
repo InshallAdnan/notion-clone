@@ -21,14 +21,14 @@ interface UserItemProps {
 export const UserItem = ({ user }: UserItemProps) => {
   const displayName = user.name ?? "User";
   const displayEmail = user.email ?? "";
-  const displayImage = user.image ?? undefined;
+  const displayImage = user.image ?? '/empty.png';
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="flex items-center text-sm p-3 w-full hover:bg-primary/5" role="button">
           <div className="gap-x-2 flex items-center max-w-[150px]">
-            <Avatar className="w-5 h-5">
+            <Avatar className="w-5 h-5 bg-secondary-foreground/30">
               <AvatarImage src={displayImage}/>
             </Avatar>
               <span className="text-start font-medium line-clamp-1">
@@ -39,7 +39,7 @@ export const UserItem = ({ user }: UserItemProps) => {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-80" align="start" alignOffset={11} forceMount>
-        <div className="flex flex-col space-y-4 p-2">
+        <div className="flex flex-col space-y-4 p-2 rounded-md">
           <p className="text-xs font-medium leading-none text-muted-foreground">
             {displayEmail}
           </p>

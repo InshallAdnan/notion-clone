@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   AlertDialog,
@@ -9,21 +9,23 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger
+  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import React from "react";
 
 interface ConfirmModalProps {
-  children:React.ReactNode
-  onConfirm:() => void
-};
+  children: React.ReactNode;
+  onConfirm: () => void;
+}
 
-const ConfirmModal = ({children,onConfirm}:ConfirmModalProps) => {
-  const handleConfirm = (e:React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
+const ConfirmModal = ({ children, onConfirm }: ConfirmModalProps) => {
+  const handleConfirm = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
     e.stopPropagation();
     onConfirm();
   };
-  
+
   return (
     <AlertDialog>
       <AlertDialogTrigger onClick={(e) => e.stopPropagation()} asChild>
@@ -31,9 +33,7 @@ const ConfirmModal = ({children,onConfirm}:ConfirmModalProps) => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>
-            Are you absolutely sure?
-          </AlertDialogTitle>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
             This action cannot be undone.
           </AlertDialogDescription>
@@ -42,9 +42,7 @@ const ConfirmModal = ({children,onConfirm}:ConfirmModalProps) => {
           <AlertDialogCancel onClick={(e) => e.stopPropagation()}>
             Cancel
           </AlertDialogCancel>
-          <AlertDialogAction onClick={handleConfirm}>
-            Confirm
-          </AlertDialogAction>
+          <AlertDialogAction onClick={handleConfirm}>Confirm</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

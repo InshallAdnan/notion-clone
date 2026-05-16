@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Moon, Sun } from "lucide-react";
 import * as React from "react";

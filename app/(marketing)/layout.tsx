@@ -1,12 +1,10 @@
 import { Navbar } from "./_components/navbar";
 
-const MarketingLayout = ({children}:{children:React.ReactNode}) => {
-  return ( 
-    <div className="h-full dark:bg-secondary/70">
-      <Navbar/>
-      <main className="h-full pt-20">
-        {children}
-      </main>
+const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="h-full dark:bg-secondary/30">
+      <Navbar />
+      <main className="h-full pt-20">{children}</main>
     </div>
   );
 };

@@ -1,14 +1,10 @@
-"use client"	
+"use client";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { useConverImage } from "@/hooks/use-cover-image";
 import { SingleImageDropzone } from "@/components/single-image-dropzone";
 import { useEdgeStore } from "@/lib/edgestore";
@@ -49,9 +45,7 @@ const CoverImageModal = () => {
     <Dialog open={coverImage.isOpen} onOpenChange={coverImage.onClose}>
       <DialogContent>
         <DialogHeader>
-          <h2 className="text-center text-lg font-semibold">
-            Cover Image
-          </h2>
+          <h2 className="text-center text-lg font-semibold">Cover Image</h2>
         </DialogHeader>
         <div className="py-4">
           <SingleImageDropzone

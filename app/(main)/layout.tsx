@@ -8,7 +8,9 @@ import Navigation from "./_components/navigation";
 import { SearchCommand } from "@/components/search-command";
 import { type UserSummary } from "@/types/document";
 
-export default async function MainLayout ({
+import { mockPage } from "@/lib/mock-page";
+
+export default async function MainLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -44,12 +46,12 @@ export default async function MainLayout ({
   };
 
   return (
-    <div className="h-full flex dark:bg-secondary/70">
-      <Navigation documents={documents} user={user} />
+    <div className="h-full flex dark:bg-secondary/30">
+      <Navigation documents={[mockPage, ...documents]} user={user} />
       <main className="flex-1 h-full overflow-y-auto">
         <SearchCommand documents={documents} user={user} />
         {children}
       </main>
     </div>
   );
-};
+}

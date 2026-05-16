@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -14,12 +14,12 @@ const ModalProvider = () => {
 
   if (!isMounted) {
     return null;
-  };
+  }
 
   return (
     <>
-      <SettingsModal/>
-      <CoverImageModal/>
+      <SettingsModal />
+      <CoverImageModal />
     </>
   );
 };
