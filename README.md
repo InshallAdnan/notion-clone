@@ -1,45 +1,50 @@
 <div align="center">
-  <h1>🧠 Notion Clone</h1>
-  <p align="center">
-    A full-featured clone of Notion built with modern web technologies.
-    <br />
-    <a href="https://github.com/sofiahernandes/notion-clone/issues">Report Bug</a>
-    |
-    <a href="https://github.com/sofiahernandes/notion-clone/issues">Request Feature</a>
-  </p>
-  
-  <img width="1920" height="1080" alt="notion-clone" src="https://github.com/user-attachments/assets/9e8f3498-99f8-481f-af20-10a18467025b" />
+<h1>Notion Clone | Note-taking Platform</h1>
+<img height="240" alt="notion-clone" src="https://github.com/user-attachments/assets/6ad53583-ba1e-464b-bd01-910cbddac75e" />
+
+<p>
+All-in-one workspace to write notes, manage tasks, organize projects, and collaborate. <br/>
+Portfolio project inspired by the one and only <a href="https://www.notion.com/">https://www.notion.com</a>
+</p>
 </div>
+
 <br/>
 
-## 🚀 Tech Stack
-- Blocknote/core - Notion-style rich text editor
-- Next.js – Full-stack React framework
-- Tailwind CSS – Utility-first styling
-- Edge Store – File uploads
-- NextAuth (Google) – Authentication
-- Prisma + SQLite – Document data store
-- Zustand – State management
-- Zod – Type-safe validation
+## Description
 
-## ✨ Features
-📝 Notion-style block editor  
-🧾 Infinite nested documents  
-🗑️ Trash bin with soft delete & recovery  
-📁 Upload cover images to Edge Store  
-🖼️ Customizeble cover image per document  
-📎 Custom icons for documents, with real-time updates  
-📂 Expandable and collapsible sidebar navigation  
-📱 Fully responsive (mobile + desktop)  
-🔐 Google sign-in with user workspaces  
-📤 Publish pages with shareable links  
+"You probably have fifteen tabs open: one for email, one for Slack, one for Google Docs, and on, and on... That’s where Notion comes in. We want to break away from today’s tools—and bring back some of the ideas of those early pioneers. As a first step, we are blending much of your workflow into an all-in-one workspace. Want a task list? A product roadmap? A design repository? They are now all in one place. You can even customize your own workspace from dozens of building blocks.Solve your problems your way, bounded only by your imagination."
+
 <br/>
 
-## 🛠️ Getting Started
-### Prerequisites
+## Tech Stack
+- Next.js: Full-stack React framework
+- Blocknote/core: Notion-style rich text editor
+- Edge Store: File uploads
+- NextAuth (Google): Authentication
+- Prisma + SQLite: Document data store
+- Zustand: State management
+- Zod: Type-safe validation
+
+<br/>
+
+## Features
+- Notion-style block editor  
+- Infinite nested documents  
+- Trash bin with soft delete & recovery  
+- Upload cover images to Edge Store  
+- Customizeble cover image per document
+- Custom icons for documents, with real-time updates
+- Expandable and collapsible sidebar navigation
+- Fully responsive (mobile + desktop)
+- Google sign-in with user workspaces
+- Publish pages with shareable links
+
+<br/>
+
+## How to run it locally
+0. Prerequisites
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://classic.yarnpkg.com/lang/en/) or `npm`
-<br/>
 
 1. Clone the Repository
 ```
@@ -81,29 +86,9 @@ npm run dev
 # or
 yarn dev
 ```
-<br/>
-
-## 🤝 Contributing
-Contributions are what make the open-source community amazing. Any contributions you make are greatly appreciated.
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/my-feature`)
-3. Commit your Changes (`git commit -m 'Add some feature'`)
-4. Push to the Branch (`git push origin feature/my-feature`)
-5. Open a Pull Request
-<br/>
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and share this project — just give proper credit!
 
 <br/>
 
----
+## License
 
-<div align="center">
-  <h1>📩 Let's connect!</h1>
-  <a href="https://github.com/sofiahernandes"><img height="30px" src="https://skillicons.dev/icons?i=github"/></a><span> ∙ </span>
-  <a href="https://www.linkedin.com/in/sofiahernandes"><img height="30px" src="https://skillicons.dev/icons?i=linkedin"/></a><span> ∙ </span>
-  <a href="mailto:sofiahernandes.dev@gmail.com"><img height="30px" src="https://skillicons.dev/icons?i=gmail"/></a><span> ∙ </span>
-  <a href="https://www.instagram.com/sofiabotechiaa/"><img height="30px" src="https://skillicons.dev/icons?i=instagram"/></a>
-</div>
+<a href="https://github.com/sofiahernandes/notion-clone">Notion Clone</a> © 2026 by <a href="https://github.com/sofiahernandes">Sofia Botechia Hernandes</a> is licensed under [MIT](LICENSE).
