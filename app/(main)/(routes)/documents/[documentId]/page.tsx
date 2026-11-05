@@ -15,18 +15,18 @@ interface DocumentIdPageProps {
 }
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
-  const session = await getServerSession(authOptions);
+  const { documentId } = await params;
 
   if (!session?.user?.id) {
     redirect("/");
   }
 
   const document =
-    params.documentId === mockPage.id
+    documentId === mockPage.id
       ? mockPage
       : await prisma.document.findFirst({
           where: {
-            id: params.documentId,
+            id: documentId,
             userId: session.user.id,
           },
           select: {
