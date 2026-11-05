@@ -9,9 +9,9 @@ import { prisma } from "@/lib/prisma";
 import { mockPage } from "@/lib/mock-page";
 
 interface DocumentIdPageProps {
-  params: {
+  params: Promise<{
     documentId: string;
-  };
+  }>;
 }
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
